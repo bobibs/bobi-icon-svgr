@@ -1,0 +1,83 @@
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 16px;
+  margin: 0 0 16px 0;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+
+.iconFacebook {
+  background: #4267B2;
+}
+
+.iconFacebook:hover {
+  background: #FFFFFF;
+}
+
+.facebook {
+  height: 18px;
+  width: 18px;
+  color: #FFFFFF;
+}
+
+.iconFacebook:hover .facebook {
+  color: #4267B2;
+}
+
+.iconLinkedin {
+  background: #0A66C2;
+}
+
+.iconLinkedin:hover {
+  background: #FFFFFF;
+}
+
+.linkedin {
+  height: 18px;
+  width: 18px;
+  color: #FFFFFF;
+}
+
+.iconLinkedin:hover .linkedin {
+  color: #0A66C2;
+}
+
+.iconTwitter {
+  background: #1DA1F2;
+}
+
+.iconTwitter:hover {
+  background: #FFFFFF;
+}
+
+.twitter {
+  height: 18px;
+  width: 18px;
+  color: #FFFFFF;
+}
+
+.iconTwitter:hover .twitter {
+  color: #1DA1F2;
+}
+
+.other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #3C4048;
+  margin: 0 0 16px 0;
+}
