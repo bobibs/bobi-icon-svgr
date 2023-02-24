@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { IconCircleNotch, IconEmail, IconPassword } from 'bobi-icon-svgr'
+import { IconEye, IconEyeSlash } from '../../icons'
 import styles from './LoginForm.module.css'
 
 export default function LoginForm() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [show, setShow] = useState(false)
   const [isEmptyUsername, setIsEmptyUsername] = useState(false)
   const [isEmptyPassword, setIsEmptyPassword] = useState(false)
   const [isSubmit, setIsSubmit] = useState(false)
@@ -43,6 +45,23 @@ export default function LoginForm() {
     }
   }
 
+  const handleIconPassword = () => {
+    if (show) {
+      return (
+        <IconEye
+          className={styles.iconPassword}
+          onClick={() => setShow(false)}
+        />
+      )
+    }
+    return (
+      <IconEyeSlash
+        className={styles.iconPassword}
+        onClick={() => setShow(true)}
+      />
+    )
+  }
+
   return (
     <div className={styles.root}>
       <div className={styles.field}>
@@ -59,8 +78,9 @@ export default function LoginForm() {
           className={styles.input}
           onChange={e => onChangePassword(e)}
           placeholder='Password'
-          type='password'
+          type={show ? 'text' : 'password'}
         />
+        {handleIconPassword()}
       </div>
       <div className={styles.action}>
         <div className={styles.fieldCheckbox}>

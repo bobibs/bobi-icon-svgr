@@ -53,6 +53,12 @@
   outline: none;
 }
 
+.iconPassword {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
 .action {
   display: flex;
   justify-content: space-between;

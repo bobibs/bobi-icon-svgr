@@ -20,7 +20,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "analyze": "source-map-explorer 'build/static/js/*.js'"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "prebuild": "rimraf src/icons",
+    "svgr": "svgr --icon 16px --ref --title-prop --replace-attr-values '#3C4048=currentColor' -d src/icons src/assets",
+    "buildsvgr": "npm run prebuild && npm run svgr"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@svgr/cli": "^6.5.1"
   }
 }
